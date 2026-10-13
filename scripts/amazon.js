@@ -5,7 +5,8 @@ import { products } from '../data/products.js';
 let productsHTML = '';
 
 products.forEach(product => {
-  productElement = productsHTML += `
+  productsHTML +=
+    `
        <div class="product-container">
         <div class="product-image-container">
           <img class="product-image" src="${product.image}">
@@ -53,6 +54,7 @@ products.forEach(product => {
           Add to Cart
         </button>
       </div>
+
     `;
 });
 
@@ -76,5 +78,6 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
     const productId = button.dataset.productId;
     addToCart(productId);
     updateCartQuantity();
+
   });
 });
