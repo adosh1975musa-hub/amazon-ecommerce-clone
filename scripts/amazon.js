@@ -1,7 +1,9 @@
 import { cart, addToCart } from '../data/cart.js';
-import { products } from '../data/products.js';
+import { products, loadProducts } from '../data/products.js';
 
+loadProducts( renderProductsGrid);
 
+function renderProductsGrid() {
 let productsHTML = '';
 
 products.forEach(product => {
@@ -83,3 +85,4 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
 
   });
 });
+}
